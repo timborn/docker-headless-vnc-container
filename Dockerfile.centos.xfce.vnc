@@ -53,7 +53,7 @@ RUN $INST_SCRIPTS/no_vnc.sh
 
 ### Install firefox and chrome browser
 RUN $INST_SCRIPTS/firefox.sh
-RUN $INST_SCRIPTS/chrome.sh
+# RUN $INST_SCRIPTS/chrome.sh
 
 ### Install xfce UI
 RUN $INST_SCRIPTS/xfce_ui.sh
@@ -64,7 +64,10 @@ RUN $INST_SCRIPTS/libnss_wrapper.sh
 ADD ./src/common/scripts $STARTUPDIR
 RUN $INST_SCRIPTS/set_user_permission.sh $STARTUPDIR $HOME
 
-### Install firefox and chrome browser
+### Install Home Customizations
+RUN $INST_SCRIPTS/home.sh
+
+### Install IntelliJ
 RUN $INST_SCRIPTS/intellij.sh
 
 ### configure proxy
