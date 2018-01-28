@@ -5,7 +5,7 @@ set -e
 echo "Install HOME Cusomizations"
 
 echo "set -o vi" >> $HOME/.bashrc
-echo "alias lf=\"ls -FC\'" >> $HOME/.bashrc
+echo "alias lf=\"ls -FC\"" >> $HOME/.bashrc
 
 cat > $HOME/readme.txt <<EOF
 The environment variable IMAGE_VERSION contains the unique identifier of the
